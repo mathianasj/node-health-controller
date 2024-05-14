@@ -1,0 +1,4 @@
+## Append samples of your project ##
+resources:
+- node_v1alpha1_nodehealthcheck.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples

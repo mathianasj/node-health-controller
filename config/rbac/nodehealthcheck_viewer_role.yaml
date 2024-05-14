@@ -1,0 +1,27 @@
+# permissions for end users to view nodehealthchecks.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: nodehealthcheck-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: node-health-controller
+    app.kubernetes.io/part-of: node-health-controller
+    app.kubernetes.io/managed-by: kustomize
+  name: nodehealthcheck-viewer-role
+rules:
+- apiGroups:
+  - node.mathianasj.github.com
+  resources:
+  - nodehealthchecks
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - node.mathianasj.github.com
+  resources:
+  - nodehealthchecks/status
+  verbs:
+  - get

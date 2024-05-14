@@ -1,0 +1,12 @@
+apiVersion: node.mathianasj.github.com/v1alpha1
+kind: NodeHealthCheck
+metadata:
+  labels:
+    app.kubernetes.io/name: nodehealthcheck
+    app.kubernetes.io/instance: nodehealthcheck-sample
+    app.kubernetes.io/part-of: node-health-controller
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: node-health-controller
+  name: nodehealthcheck-sample
+spec:
+  # TODO(user): Add fields here
